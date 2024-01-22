@@ -1,0 +1,69 @@
+body,
+html,
+main {
+	font-family: sans-serif;
+	font-size: 16px;
+	text-align: center;
+	padding: 0;
+	margin: 0;
+}
+
+main {
+	height: 100vh;
+	display: grid;
+	grid-template-rows: 1fr auto;
+
+	#prompt-area {
+		padding: 1rem;
+		background: lightgray;
+
+		form {
+			display: grid;
+			grid-template-columns: 1fr auto;
+			input {
+				padding: .5rem 1rem;
+				border: solid 1px grey;
+				font-size: 1rem;
+				border-radius: 1rem 0rem 0rem 1rem;
+			}
+
+			button {
+				padding: .5rem 1rem;
+				border: solid 1px blue;
+				background: blue;
+				color: white;
+				font-size: 1rem;
+				border-radius: 0rem 1rem 1rem 0rem;
+			}
+		}
+
+	}
+
+	#chat-area {
+		display: grid;
+		gap: 1rem;
+		align-content: start;
+		padding: 1rem;
+
+		div {
+			width: 40%;
+			max-width: 400px;
+			height: fit-content;
+			padding: 1rem 2rem;
+			border-radius: 1rem;
+
+			&.user-chat {
+				justify-self: end;
+				background: darkblue;
+				color: white;
+			}
+
+			&.ai-chat {
+				justify-self: start;
+				background: lightblue;
+				color: darkblue;
+			}
+		}
+	}
+
+}
